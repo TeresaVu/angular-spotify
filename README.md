@@ -1,6 +1,6 @@
 # Angular Spotify
 
-A simple Spotify client built with Angular 15, Nx workspace, ngrx, TailwindCSS and ng-zorro.
+A simple Spotify client with added visualization feature. Built with Angular 15, Nx workspace, ngrx, TailwindCSS and ng-zorro. Includes features like music playback using the Spotify SDK, visualization, and loading playlists and songs. There are also live stream sessions recorded with development updates and follow-alongs. Check the Community section for more details.
 
 > I have recently shared about #angularspotify at [AngularAir](https://angularair.com), you can watch the session here 👉 [youtu.be/uPB0KHKlrU8][02-air]
 
@@ -215,7 +215,7 @@ I have received some invitations to talk about Angular Spotify from the communit
 [01-beeman]: https://youtu.be/9zJcb6ZhBaI
 [02-air]: https://youtu.be/uPB0KHKlrU8
 
-## Time spending
+## Time spent
 
 It is a side project that I only spent time outside of the office hours to work on. I initially planned to complete the project within two weeks, but the first two weekends were not very productive, maybe because of the holiday mood from Lunar New Year :) But once the lego blocks are getting together, I feel the rhythm, and I know it has to be finished by the end of March.
 
@@ -233,6 +233,12 @@ Not all components have properly defined [aria attributes](https://developer.moz
 
 ## Setting up the development environment 🛠
 
+### Pre-requisites
+Before you begin, make sure you have the following prerequisites:
+
+Node.js installed
+Angular CLI installed (npm install -g @angular/cli)
+
 - `git clone https://github.com/trungk18/angular-spotify.git`
 - `cd angular-spotify`
 - `npm start` for starting Angular web application
@@ -240,7 +246,7 @@ Not all components have properly defined [aria attributes](https://developer.moz
 
 ### Unit/Integration tests 🧪
 
-I skipped writing test for this project.
+I skipped writing tests for this project. Adding tests is an area for potential contributions.
 
 ## Compatibility
 
@@ -249,6 +255,25 @@ Web Playback SDK supports Chrome, Firefox, Edge, IE 11, or above running on Mac/
 It **doesn't support** Safari or any mobile browser on **Android** or **iOS**
 
 View [completed list of supported browsers](https://developer.spotify.com/documentation/web-playback-sdk/#supported-browsers)
+
+## Frequently Asked Questions (FAQs)
+
+### 1. How can I configure Spotify authentication?
+
+To configure Spotify authentication, you need to create a Spotify Developer application on the Spotify Developer Dashboard. Once you have your Spotify Client ID, update the SPOTIFY_CLIENT_ID constant in the environment.ts file with your Client ID.
+
+### 2. How do I customize the UI?
+
+Angular Spotify uses TailwindCSS for styling, making it easy to customize the UI. You can modify the appearance by editing TailwindCSS classes in the project's stylesheets. Additionally, the ng-zorro UI components can be customized by following the official documentation.
+
+### 3. How can I add new features or pages?
+
+To add new features or pages to the project, follow these steps:
+
+- Create a new Angular module using the Angular CLI: ng generate module my-feature.
+- Implement your feature within the module, including components, services, and routing.
+- Register your new module in the appropriate location within the project structure (e.g., in libs or apps).
+- Update the application's routing configuration to include your new feature.
 
 ## Author: Trung Vo ✍️
 
